@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'docker build -t simple-django-on-docker -f Dockerfile .'
-                sh './stop.sh'
+                sh 'docker ps -a | grep "jenkins-cfehome" | cut -d " " -f 1 |xargs -I {} docker stop {}'
                 sh 'docker run --name jenkins-cfehome --rm -it -p 38086:8000 simple-django-on-docker'
             }
         }

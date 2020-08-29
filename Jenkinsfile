@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'docker ps -a'
-                sh 'tree -L 2 /'
+                sh 'docker-compose version'
             }
         }
     }

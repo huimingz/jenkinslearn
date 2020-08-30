@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage('build') {
-            enviroment {
+            environment {
                 AWESOME_QQ = credentials('awesome-qq')
             }
             steps {

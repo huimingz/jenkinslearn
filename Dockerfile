@@ -39,4 +39,4 @@ RUN pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 
 EXPOSE 8000
-CMD gunicorn cfehome.wsgi:application -w 2 --threads 2 --bind 0.0.0.0:$PORT
+CMD gunicorn cfehome.wsgi:application -w 4 --threads 2 --bind 0.0.0.0:$PORT

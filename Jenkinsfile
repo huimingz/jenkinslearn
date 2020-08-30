@@ -2,6 +2,9 @@ pipeline {
     agent any
     stages {
         stage('build') {
+            enviroment {
+                AWESOME_QQ = credentials('awesome-qq')
+            }
             steps {
                 sh 'printenv'
                 sh 'docker build -t simple-django-on-docker -f Dockerfile .'

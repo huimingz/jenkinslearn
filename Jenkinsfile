@@ -7,6 +7,8 @@ pipeline {
                 DOCKER_TXT = credentials('e6741f1d-c669-432f-8bc8-e35b51a431c0')
             }
             steps {
+                sh 'whoami'
+                sh 'supervisorctl status'
                 sh 'printenv'
                 sh 'cat $DOCKER_TXT'
                 sh 'docker build -t simple-django-on-docker -f Dockerfile .'

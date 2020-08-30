@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             environment {
-                AWESOME_QQ = credentials('awesome-qq')
+                AWESOME_QQ = credentials('e059b864-4df0-429d-8404-f1fc41fe7808')
             }
             steps {
                 sh 'printenv'

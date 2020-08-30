@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             environment {
-                AWESOME_NAME = credentials('0a813731-59be-4dd8-885f-5844fee8d492')
-                DOCKER_TXT = credentials('ce487cc0-bb9d-48d0-8779-d90a641509c0')
+                AWESOME_NAME = credentials('e6741f1d-c669-432f-8bc8-e35b51a431c0')
+                DOCKER_TXT = credentials('e6741f1d-c669-432f-8bc8-e35b51a431c0')
             }
             steps {
                 sh 'printenv'

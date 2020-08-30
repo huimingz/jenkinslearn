@@ -8,7 +8,6 @@ pipeline {
             }
             steps {
                 sh 'whoami'
-                sh 'supervisorctl status'
                 sh 'printenv'
                 sh 'cat $DOCKER_TXT'
                 sh 'docker build -t simple-django-on-docker -f Dockerfile .'
